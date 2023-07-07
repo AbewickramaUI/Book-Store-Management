@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+ 
+  border: 3px solid #ccc;
+  float: left;
+  width: 255px;
+}
+div.card img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+div.card:hover{
+	  border: 3px solid #777;
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+h1{
+	text-align: left;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 40px;
+	background-color:#383838;
+	text-decoration-color:#1e3d59;
+	padding: 20px;
+	color: aliceblue;
+	image-orientation:none;
+}
+h2{
+	font-family:"aguafina-script";
+	text-align: center;
+	font-style: normal;
+	font-weight: 60px;
+	font-size: 30px;
+	color: #000000;
+	image-orientation:none;
+}
