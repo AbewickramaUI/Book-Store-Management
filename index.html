@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rainbow Books</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="Public/css/home.css">
+	<link rel="stylesheet" href="Public/css/nav.css">
+<body onload="showSlides()">
+	<nav class="navbar">
+		<div class="nav">
+			<img src="Public/img/home logo.png" alt="" width="269" height="202" class="brand-logo">
+			<div class="nav-items">
+				<div class="search">
+					<input type="text" class="search-box" placeholder="search title, Author">
+					<button class="search-btn">search</button>
+			  </div>
+				<a href="profile.php"><img src="Public/img/user.png" alt=""></a>
+				<a href="cart.php"><img src="Public/img/cart.png" alt=""></a>
+		  </div>
+	  </div>
+	  <ul>
+		  <a href="index.html"><li>Home</li></a>
+		  <a href="category.php"><li>Book Category</li></a>
+  <div class="dropdown">
+    <button class="dropbtn">Details
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Romance</a>
+      <a href="#">Crime and Thriller</a>
+      <a href="#">Fantasy</a>
+	  <a href="#">Science Fiction</a>
+	  <a href="#">Poetry</a>
+	  <a href="#">Historical</a>
+	  <a href="#">Religion</a>
+	  <a href="#">Fairy Tales</a>
+	  <a href="#">Mystery</a>
+	  <a href="#">Biography</a>
+	  <a href="#">Art</a>
+	  <a href="#">Education</a>
+    </div>
+  </div>
+		  <a href="checkout.php"><li>Checkout</li></a>
+		  <a href="aboutus.php"><li>About Us</li></a>
+	  </ul>
+	</nav>
+	<div class="row">
+		<div class="col-2">
+			<h1>Top categories of books..</h1>
+		</div>
+	</div>
+	
+	<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Public/img/horror1.jpg" alt="" style="width:100%" height="800px" >
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Public/img/horror.jpg" alt="" style="width:100%" height="800px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Public/img/fantasy.jpg" alt="" style="width:100%" height="800px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Public/img/science.jpg" alt="" style="width:100%" height="800px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Public/img/poetry.jpg" alt="" style="width:100%" height="800px">
+  </div>
+	
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Public/img/romance.jpg" alt="" style="width:100%" height="800px">
+  </div>
+    
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Public/img/horror1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Horror">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Public/img/horror.jpg" style="width:100%" onclick="currentSlide(2)" alt="Crime and Thriller">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Public/img/fantasy.jpg" style="width:100%" onclick="currentSlide(3)" alt="Fantasy">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Public/img/science.jpg" style="width:100%" onclick="currentSlide(4)" alt="Science Fiction">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Public/img/poetry.jpg" style="width:100%" onclick="currentSlide(5)" alt="Poetry">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="Public/img/romance.jpg" style="width:100%" onclick="currentSlide(6)" alt="Romance">
+    </div>
+  </div>
+</div>
+	
+	
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+	
+
+<p class="side">Exsisting Member <a href="login.php">Login</a></p>
+<p class="side">New Member <a href="register.php">Register</a></p>
+<p class="side">Admin <a href="admin.php">Login</a></p>
+<p class="side">Add a Feedback <a href="feedback.php">Customer Feedback</a></p>
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify"> Our purpose is to sustainably make the pleasure and the benifits of books accessible to the many..</p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="aboutus.php">About Us</a></li>
+              <li><a href="index.html">Details</a></li>
+              <li><a href="privacy.php">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+         <a href="#">Rainbow Books</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+	
+</body>
+	
+</html>
